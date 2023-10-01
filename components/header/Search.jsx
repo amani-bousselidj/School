@@ -5,11 +5,10 @@ const [search, setSearch] = useState(false);
 const toggleSearch =()=>{
     setSearch(!search)
     if(!search){
-        document.body.style.overflowY ="hidden";
+        document.documentElement.style.overflowY = "hidden";
     }
     else{
-        document.body.style.overflowY ="scroll";
-
+        document.documentElement.style.overflowY = "scroll";
     }
 }
   return (

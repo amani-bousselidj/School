@@ -5,17 +5,16 @@ const [loginForm, setLoginForm] = useState(false);
 const toggleLoginForm =()=>{
     setLoginForm(!loginForm);
     if(!loginForm){
-        document.body.style.overflowY ="hidden";
+      document.documentElement.style.overflowY = "hidden";
     }
     else{
-        document.body.style.overflowY ="scroll";
-
+      document.documentElement.style.overflowY = "scroll";
     }
 }
   return (
     <div className={`login ${props.margin}`}>
           <button type="button" className="btn" onClick={toggleLoginForm}>
-          <i className={`${props.visible} fa-regular  fa-user`}></i>
+          <i className={`${props.visible} fa-regular  fa-user me-1`}></i>
           {props.title}  
           </button>
          {loginForm && ( <div className='login-model'>
