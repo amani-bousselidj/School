@@ -300,10 +300,6 @@ body {
     background-color: var(--color);
 }
 
-.login .forgot a {
-    color: var(--color);
-}
-
 .login .login-submit {
     width: 100%;
     border: var(--color);
