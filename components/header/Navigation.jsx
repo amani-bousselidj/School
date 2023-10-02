@@ -1,12 +1,14 @@
 import React from 'react'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { useNavbarState } from './navbarState';
 export const Navigation = () => {
     const navbar = useNavbarState();
   return (
     <div className={`navigation ${navbar ? 'hiding' : ''}`}>
     <ul className='nav navbar justify-content-between'>
-        <li><a  className='nav-item'>Home</a></li>
-        <li><a  className='nav-item'>Online Course</a></li>
+    
+        <li><a  className='nav-item'><Link to="/">Home</Link></a></li>
+        <li><a  className='nav-item'><Link to="/online_course">Online Course</Link></a></li>
         <li><a  className='nav-item'>Online Admission</a></li>
         <li><a  className='nav-item'>About Us</a></li>
         <li className='nav-item dropdown'>

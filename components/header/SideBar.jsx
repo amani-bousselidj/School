@@ -1,4 +1,5 @@
 import React  ,{useState} from 'react'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { useNavbarState } from './navbarState';
 import Logo from './Logo';
 export default function SideBar() {
@@ -26,7 +27,8 @@ const toggleSidebar =()=>{
                  <Logo />
             </div>
             <ul className='nav navbar flex-column align-items-start'>
-                      <li className='border-btm'><a  className='nav-item'>Online Course</a></li>
+                      <li className='border-btm'><a  className='nav-item'><Link to="/">Home</Link></a></li>
+                      <li className='border-btm'><a  className='nav-item'><Link to="/online_course">Online Course</Link></a></li>
                       <li className='border-btm'><a  className='nav-item '>Online Admission</a></li>
                       <li className='border-btm'><a  className='nav-item '>About Us</a></li>
                       <li className='nav-item dropdown border-btm'>
